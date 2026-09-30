@@ -319,7 +319,7 @@ const Projects = () => {
       {/* Mobile Swipeable Carousel */}
       <div 
         ref={mobileCarouselRef}
-        className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-auto py-12 flex items-center gap-6 px-[12.5vw] pointer-events-none z-[100] snap-x snap-mandatory overflow-x-hidden hide-scrollbar"
+        className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto py-12 flex items-center gap-6 px-[12.5vw] pointer-events-none z-[100] snap-x snap-mandatory overflow-x-auto hide-scrollbar"
       >
         <style>{`
           .hide-scrollbar::-webkit-scrollbar { display: none; }
