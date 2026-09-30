@@ -206,7 +206,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" ref={containerRef} className="bg-[#0b0b0b] min-h-[100svh] md:min-h-[170vh] relative font-sans overflow-x-clip text-white w-full flex items-center justify-center py-24 md:py-40 select-none">
+    <section id="projects" ref={containerRef} className="bg-[#0b0b0b] relative font-sans overflow-x-clip text-white w-full flex flex-col items-center justify-center py-24 md:min-h-[170vh] md:py-40 select-none">
       
       {/* Background Netflix Cinematic Title Watermark */}
       <div className="absolute top-10 left-0 w-full flex items-start justify-center pointer-events-none z-0">
@@ -219,7 +219,7 @@ const Projects = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] h-[55vw] bg-red-600/15 rounded-full blur-[160px] pointer-events-none z-0" />
 
       {/* Main Perspective Container */}
-      <div className="mt-12 relative w-full max-w-7xl h-full flex items-center justify-center perspective-[2000px] z-10">
+      <div className="hidden md:flex mt-12 relative w-full max-w-7xl h-full items-center justify-center perspective-[2000px] z-10">
         
         {/* Origin Container */}
         <div className="relative w-0 h-0 transform-style-3d">
@@ -302,7 +302,7 @@ const Projects = () => {
       {/* Mobile Swipeable Carousel */}
       <div 
         ref={mobileCarouselRef}
-        className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto py-12 flex items-center gap-6 px-[12.5vw] pointer-events-none z-[100] snap-x snap-mandatory overflow-x-auto hide-scrollbar"
+        className="md:hidden relative w-full h-auto py-12 mt-16 flex items-center gap-6 px-[12.5vw] pointer-events-none z-[100] snap-x snap-mandatory overflow-x-auto hide-scrollbar"
       >
         <style>{`
           .hide-scrollbar::-webkit-scrollbar { display: none; }
