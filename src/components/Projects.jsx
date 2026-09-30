@@ -184,27 +184,10 @@ const Projects = () => {
             }
           });
 
-          tl.to(folderFrontRef.current, {
-            rotationX: -130,
-            duration: 0.8,
-            ease: "power3.inOut"
-          });
-
           tl.to(mobileCardsRef.current, {
-            y: -100,
-            opacity: 1,
-            scale: 0.85,
-            duration: 0.6,
-            stagger: 0.05,
-            ease: "back.out(1.2)"
-          }, "-=0.4");
-
-          tl.to(mobileCardsRef.current, {
-            x: 0,
             y: 0,
-            rotation: 0,
+            opacity: 1,
             scale: (i) => i === 0 ? 1 : 0.92,
-            opacity: (i) => i === 0 ? 1 : 0.5,
             duration: 0.8,
             stagger: 0.08,
             ease: "expo.out",
@@ -214,7 +197,7 @@ const Projects = () => {
                 mobileCarouselRef.current.style.pointerEvents = 'auto';
               }
             }
-          }, "-=0.2");
+          });
         }
       });
     }, containerRef);
@@ -244,7 +227,7 @@ const Projects = () => {
           {/* Folder Back */}
           <div 
             ref={folderBackRef}
-            className="absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video bg-[#141414] rounded-[24px] border border-red-600/40 shadow-[0_20px_50px_rgba(229,9,20,0.25)] flex items-center justify-center"
+            className="hidden md:flex absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video bg-[#141414] rounded-[24px] border border-red-600/40 shadow-[0_20px_50px_rgba(229,9,20,0.25)] items-center justify-center"
             style={{ zIndex: 5 }}
           >
             <div className="absolute -top-6 left-6 w-32 h-8 bg-[#1f1f1f] rounded-t-xl border-t border-red-600/30" />
@@ -305,7 +288,7 @@ const Projects = () => {
           {/* Folder Front Flap */}
           <div 
             ref={folderFrontRef}
-            className="absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video pointer-events-none will-change-transform"
+            className="hidden md:block absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video pointer-events-none will-change-transform"
             style={{ zIndex: 60 }}
           >
             <div className="absolute bottom-0 w-full h-[85%] bg-[#1c1c1c] rounded-b-[24px] rounded-t-md shadow-[0_-5px_20px_rgba(0,0,0,0.8)] flex flex-col justify-end p-6 border-t border-red-600/40">
