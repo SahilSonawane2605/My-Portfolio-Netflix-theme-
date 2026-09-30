@@ -1,0 +1,12 @@
+﻿rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Only allow public to create inquiries.
+    // Admin (authenticated) can read, update, delete.
+    match /inquiries/{inquiryId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}
