@@ -318,7 +318,7 @@ const Hero = () => {
           <a href="#contact" className="hover:text-red-500 transition-colors">Contact</a>
         </nav>
         <a
-          href="/Sahil_Sonawane_Resume.pdf"
+          href="/Sahil_Sonawane__Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105 active:scale-95"
